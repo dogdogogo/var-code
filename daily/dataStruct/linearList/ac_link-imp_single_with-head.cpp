@@ -15,6 +15,8 @@ bool indexInsert(LinkList&, int, int);
 bool nodeNextInsert(Node*, int);
 bool nodePriorInsert(Node*, int);
 bool indexDelete(LinkList&, int, int&);
+Node* get(LinkList&, int);
+Node* locate(LinkList&, int);
 
 void prtList(LinkList);
 
@@ -46,6 +48,14 @@ int main() {
   printf("-- %d\n", indexDelete(l, 8, getRet));
   prtList(l);
 
+  get(l, 2);
+  get(l, 10);
+  Node* g = get(l, 7);
+  printf("<< %d\n", g->data);
+
+  Node* aa= locate(l, 102);
+  printf("==> locate %d.\n", aa->data);
+
   return 0;
 }
 
@@ -55,7 +65,7 @@ bool initList(LinkList& L) {
     return false;
 
   L->next = NULL;
-  printf("~~ init a linklist.\n");
+  printf("** init a linklist.\n");
   return true;
 }
 
@@ -167,6 +177,35 @@ bool indexDelete(LinkList& L, int i, int& r) {
   free(nn);
   printf("-- del %d at index %d.\n", r, i);
   return true;
+}
+
+Node* get(LinkList& L, int i) {
+  if (i < 1)
+    return NULL;
+
+  Node* n = L;
+  int c = 0;
+
+  while (n != NULL && c < i) {
+    n = n->next;
+    c ++;
+  }
+
+  if (n != NULL)
+    printf(">> %d at index %d.\n", n->data, i);
+  else
+    printf(">> not get.\n");
+  return n;
+}
+
+Node* locate(LinkList& L, int n) {
+  if (L == NULL)
+    return NULL;
+
+  Node* p = L->next;
+  while (p != NULL && p->data != n)
+    p = p->next;
+  return p;
 }
 
 
