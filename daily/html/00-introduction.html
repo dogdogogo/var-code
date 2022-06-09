@@ -1,0 +1,121 @@
+<!--
+  - margin border padding
+
+  - Inline and Block Level Element
+
+  - attribute
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Crash Course</title>
+  </head>
+  <body>
+    <!-- Heading -->
+    <h1>Heading Level 1</h1>
+    <h2>Heading Level 2</h2>
+
+    <!-- Paragraph -->
+    <p>Lorem ipsum dolor <strong>sit amet consectetur adipisicing elit</strong>. Eaque consequatur praesentium ea quaerat <em>culpa error necessitatibus totam iure</em>, corporis dolor corrupti quibusdam veniam dignissimos <mark>nemo adipisci exercitationem quas</mark> quo esse.</p>
+    <p>Lorem ipsum dolor, <a href="https://baidu.com" target="_blank">sit</a> amet consectetur adipisicing elit. Architecto porro similique aut ab adipisci mollitia qui excepturi pariatur natus nisi! Aut deleniti distinctio maiores quaerat sunt placeat? Id, repellat eius.</p>
+
+    <!-- List -->
+    <ul>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+    </ul>
+
+    <ol>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+    </ol>
+
+    <!-- Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Age</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Wang</td>
+          <td>Ming</td>
+          <td>99</td>
+          <td>abc@abc.com</td>
+        </tr>
+        <tr>
+          <td>Xiao</td>
+          <td>Han</td>
+          <td>98</td>
+          <td>def@abc.com</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!--
+      Line Break
+
+      - 不建议直接使用Line Break来添加空行
+      - 使用CSS来添加margin添加空白
+    -->
+    <br>
+
+    <!--
+      Thematic Break(Horizontal Rule)
+    -->
+    <hr>
+
+    <!-- Blockquote Abbreviation Citation -->
+    <p>A normal paragraph.</p>
+    <blockquote>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit ex ipsum laboriosam necessitatibus cum quidem. Accusantium et iste illo id soluta dolorum error neque culpa consequuntur sint, magni doloribus labore?</blockquote>
+    <p><abbr title="China University of Mining and Technology">CUMT</abbr> is a college.</p>
+    <p><cite>I am the god.</cite> by ABC</p>
+
+    <!--
+      Form
+
+      - action 用来提交表单后执行的逻辑，HTML不处理逻辑问题，交给javascript
+
+    -->
+    <form action="form.js" method="post">
+      <div>
+        <label>First Name</label>
+        <input type="text" name="first-name" placeholder="enter first name">
+      </div>
+      <div>
+        <label>Last Name</label>
+        <input type="text" name="last-name" placeholder="enter last name">
+      </div>
+      <div>
+        <label>Email</label>
+        <input type="text" name="email" placeholder="enter email">
+      </div>
+      <input type="submit" name="submit">
+    </form>
+
+    <!-- Button -->
+    <button>This is a Button</button>
+    <p></p>
+
+    <!--
+      Image
+
+      - 如果图片无法显示，将会显示alt中的内容
+    -->
+    <img src="https://images.unsplash.com/photo-1648737119247-e93f56878edf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" alt="A Computer">
+
+    <!-- video -->
+    <video src="./../video/01.mp4" type="video/mp4" controls>
+      This is a video
+    </video>
+
+    <!-- 页尾添加空白 -->
+    <div style="margin-top:300px"></div>
+  </body>
+</html>

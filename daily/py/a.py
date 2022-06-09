@@ -1,4 +1,3 @@
-import numpy
-string = "what is this."
+import turtle
 
-print(f"string = {string}")
+turtle.circle(100)
