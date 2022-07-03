@@ -70,8 +70,8 @@ bool top(LinkStack& s, int& ret) {
   if (s == NULL)
     return false;
 
-    ret = s->data;
-    return true;
+  ret = s->data;
+  return true;
 }
 
 
