@@ -8,3 +8,4 @@ str2 = "lua"
 str3 = [[lua]]
 print(str1, str2, str3)
 print(str3)
+
